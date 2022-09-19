@@ -11,10 +11,10 @@
 
         public Libro(string titulo, string autor, string estilo, string editorial)
         {
-            this._titulo = titulo;
-            this._autor = autor;
-            this._estilo = estilo;
-            this._editorial = editorial;
+            _titulo = titulo;
+            _autor = autor;
+            _estilo = estilo;
+            _editorial = editorial;
         }
 
         public string Titulo
