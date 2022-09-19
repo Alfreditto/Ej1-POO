@@ -5,8 +5,7 @@ namespace ConsolePrueba
     class Calendario
 
     {
-        public static void Main(string[] args)
-
+        public Calendario()
         {
             Console.WriteLine("Introduce la fecha dd/mm/aaaa");
             String fechaS = Console.ReadLine();
