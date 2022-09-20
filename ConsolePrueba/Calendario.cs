@@ -10,10 +10,25 @@ namespace ConsolePrueba
             Console.WriteLine("Introduce la fecha dd/mm/aaaa");
             String fechaS = Console.ReadLine();
             String[] fechaA = fechaS.Split('/');
-            int dia = Convert.ToInt32(fechaA[0]);
-            int mes = Convert.ToInt32(fechaA[1]);
-            int anno = Convert.ToInt32(fechaA[2]);
-            DateTime fecha = new DateTime(anno, mes, dia);
+            Boolean esFecha = false;
+            DateTime fecha;
+            try
+            {
+                int dia = Convert.ToInt32(fechaA[0]);
+                int mes = Convert.ToInt32(fechaA[1]);
+                int anno = Convert.ToInt32(fechaA[2]);
+                fecha = new DateTime(anno, mes, dia);
+            }
+            catch (FormatException e)
+            {
+                Console.WriteLine("Fecha no valida");
+                fecha = new DateTime();
+            }
+            catch (ArgumentOutOfRangeException e)
+            {
+                Console.WriteLine("Fecha no valida");
+                fecha = new DateTime();
+            }
 
             //Imprime el dia de la semana
             Console.WriteLine($"En la semana seria el dia: {fecha.DayOfWeek}");
