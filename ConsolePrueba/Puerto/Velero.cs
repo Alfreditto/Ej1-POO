@@ -11,7 +11,12 @@ public class Velero : Barco
         _numMastiles = numMastiles;
     }
 
-    public int NumMastiles => _numMastiles;
+    public int NumMastiles
+    {
+        get => _numMastiles;
+        set => _numMastiles = value;
+    }
+
     public override int CalcularModulo()
     {
        return 10 * Eslora + _numMastiles;

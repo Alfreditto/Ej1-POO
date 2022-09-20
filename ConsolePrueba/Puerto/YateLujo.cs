@@ -17,6 +17,18 @@ public class YateLujo : Barco
         _cv = cv;
     }
 
+    public int NumCamarotes
+    {
+        get => _numCamarotes;
+        set => _numCamarotes = value;
+    }
+
+    public int Cv
+    {
+        get => _cv;
+        set => _cv = value;
+    }
+
     public override int CalcularModulo()
     {
         return 10 * Eslora + _cv + _numCamarotes;

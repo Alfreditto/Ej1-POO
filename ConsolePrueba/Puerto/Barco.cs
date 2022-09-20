@@ -17,10 +17,23 @@ public abstract class Barco
         _annoFabricacion = annoFabricacion;
     }
 
-    public string Matricula => _matricula;
+    public string Matricula
+    {
+        get => _matricula;
+        set => _matricula = value ?? throw new ArgumentNullException(nameof(value));
+    }
 
-    public int Eslora => _eslora;
+    public int Eslora
+    {
+        get => _eslora;
+        set => _eslora = value;
+    }
 
-    public int AnnoFabricacion => _annoFabricacion;
+    public int AnnoFabricacion
+    {
+        get => _annoFabricacion;
+        set => _annoFabricacion = value;
+    }
+
     public abstract int CalcularModulo();
 }

@@ -10,6 +10,12 @@ public class Deportiva : Barco
         _cv = cv;
     }
 
+    public int Cv
+    {
+        get => _cv;
+        set => _cv = value;
+    }
+
     public override int CalcularModulo()
     {
         return 10 * Eslora + _cv;
