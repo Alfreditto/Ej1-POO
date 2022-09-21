@@ -1,6 +1,6 @@
 ﻿namespace ConsolePrueba.Puerto;
 
-public abstract class Barco
+public class Barco : modCalc
 {
     private String _matricula;
     private int _eslora;
@@ -35,5 +35,8 @@ public abstract class Barco
         set => _annoFabricacion = value;
     }
 
-    public abstract int CalcularModulo();
+    public int CalcularModulo()
+    {
+        return 10 * Eslora;
+    }
 }

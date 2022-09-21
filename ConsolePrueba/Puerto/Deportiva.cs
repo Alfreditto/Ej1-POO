@@ -1,6 +1,6 @@
 ﻿namespace ConsolePrueba.Puerto;
 
-public class Deportiva : Barco
+public class Deportiva : Barco, modCalc
 {
     private int _cv;
 
@@ -16,7 +16,7 @@ public class Deportiva : Barco
         set => _cv = value;
     }
 
-    public override int CalcularModulo()
+    public int CalcularModulo()
     {
         return 10 * Eslora + _cv;
     }

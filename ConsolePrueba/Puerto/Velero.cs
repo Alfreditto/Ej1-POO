@@ -1,6 +1,6 @@
 ﻿namespace ConsolePrueba.Puerto;
 
-public class Velero : Barco
+public class Velero : Barco, modCalc
 {
     private int _numMastiles;
 
@@ -17,7 +17,7 @@ public class Velero : Barco
         set => _numMastiles = value;
     }
 
-    public override int CalcularModulo()
+    public int CalcularModulo()
     {
        return 10 * Eslora + _numMastiles;
     }
